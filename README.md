@@ -1,5 +1,5 @@
 # derp-frontend
-
+IMPORTANT -- REDESIGN -- BULMA bitbucket merolekha zohoinventory
 ## Project setup
 ```
 yarn install

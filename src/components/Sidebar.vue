@@ -6,6 +6,14 @@
         <ul class="menu-list">
             <li><a class="is-active">Dashboard</a></li>
             <li><a>Customers</a></li>
+            <li>
+                <a>Items</a>
+                <ul>
+                    <li><router-link to="/item/list">ItemList</router-link></li>
+                    <li><router-link to="/item/edit">ItemEdit</router-link></li>
+                    <li><router-link to="/item/detail">ItemDetail</router-link></li>
+                </ul>
+            </li>
         </ul>
         <p class="menu-label">
             Administration
