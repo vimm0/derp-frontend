@@ -1,31 +1,31 @@
 <template>
     <div id="app">
-        <navbar></navbar>
-        <div class="container">
-            <div class="columns">
-                <div class="column is-3 ">
-                    <sidebar></sidebar>
-                </div>
-                <div class="column is-9">
+        <!--<navbar></navbar>-->
+        <!--<div class="container">-->
+            <!--<div class="columns">-->
+                <!--<div class="column is-3 ">-->
+                    <!--<sidebar></sidebar>-->
+                <!--</div>-->
+                <!--<div class="column is-9">-->
                     <router-view :key="$route.fullPath"></router-view>
-                </div>
-            </div>
-        </div>
-        <foot></foot>
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<foot></foot>-->
     </div>
 </template>
 
 <script>
-    import Navbar from './components/Navbar.vue'
-    import Sidebar from './components/Sidebar.vue'
-    import Footer from './components/Footer.vue'
+    // import Navbar from './components/Navbar.vue'
+    // import Sidebar from './components/Sidebar.vue'
+    // import Footer from './components/Footer.vue'
 
     export default {
         name: 'app',
         components: {
-            Navbar,
-            Sidebar,
-            'foot': Footer
+            // Navbar,
+            // Sidebar,
+            // 'foot': Footer
         }
     }
 </script>
