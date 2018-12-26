@@ -2,14 +2,14 @@
     <div id="app">
         <!--<navbar></navbar>-->
         <!--<div class="container">-->
-            <!--<div class="columns">-->
-                <!--<div class="column is-3 ">-->
-                    <!--<sidebar></sidebar>-->
-                <!--</div>-->
-                <!--<div class="column is-9">-->
-                    <router-view :key="$route.fullPath"></router-view>
-                <!--</div>-->
-            <!--</div>-->
+        <!--<div class="columns">-->
+        <!--<div class="column is-3 ">-->
+        <!--<sidebar></sidebar>-->
+        <!--</div>-->
+        <!--<div class="column is-9">-->
+        <router-view :key="$route.fullPath"></router-view>
+        <!--</div>-->
+        <!--</div>-->
         <!--</div>-->
         <!--<foot></foot>-->
     </div>
@@ -19,6 +19,8 @@
     // import Navbar from './components/Navbar.vue'
     // import Sidebar from './components/Sidebar.vue'
     // import Footer from './components/Footer.vue'
+    import Vue from 'vue'
+    import axios from 'axios'
 
     export default {
         name: 'app',
@@ -26,6 +28,13 @@
             // Navbar,
             // Sidebar,
             // 'foot': Footer
+        },
+        created() {
+            axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN'
+            axios.defaults.xsrfCookieName = 'csrftoken'
+            axios.defaults.baseURL = "http://localhost:8000/api/v1/"
+            global.axios = axios
+            global.Vue = Vue
         }
     }
 </script>
@@ -132,4 +141,9 @@
         max-height: 250px;
         overflow-y: scroll;
     }
+
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+
 </style>
